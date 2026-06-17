@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>斯普拉顿 Blender 委托</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">斯普拉顿 Blender 委托</p>
+        <h1>自定义你的委托并生成订单摘要图片。</h1>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" type="button">深色模式</button>
+      </div>
+    </header>
+
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <span class="label-chip">涂鸦风 · 街头感</span>
+        <h2>将委托定制与街头艺术能量融合。</h2>
+        <p>选择服务、装备和附加项，然后导出精美订单摘要 PNG 给艺术家。</p>
+      </div>
+
+      <div class="carousel-card">
+        <div class="carousel" id="showcaseCarousel">
+          <button class="carousel-control prev" id="carouselPrev" type="button">‹</button>
+          <div class="carousel-track" id="carouselTrack"></div>
+          <button class="carousel-control next" id="carouselNext" type="button">›</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-grid">
+      <section class="panel config-panel">
+        <div class="panel-header">
+          <h3>1. 选择委托类型</h3>
+        </div>
+        <div class="card-grid" id="serviceCards"></div>
+
+        <div class="panel-header">
+          <h3>2. 可选附加项</h3>
+        </div>
+        <div class="option-group">
+          <h4>背景</h4>
+          <div class="card-grid" id="backgroundCards"></div>
+        </div>
+        <div class="option-group">
+          <h4>武器</h4>
+          <div class="search-box-container">
+            <input type="text" class="search-box" id="weaponSearch" placeholder="搜索武器..." />
+          </div>
+          <div class="card-grid" id="weaponCards"></div>
+          <div class="pagination" id="weaponPagination"></div>
+        </div>
+
+        <div class="panel-header">
+          <h3>3. 装备选择</h3>
+        </div>
+        <div class="option-group">
+          <h4>头饰</h4>
+          <div class="search-box-container">
+            <input type="text" class="search-box" id="headSearch" placeholder="搜索头饰..." />
+          </div>
+          <div class="card-grid" id="headCards"></div>
+          <div class="pagination" id="headPagination"></div>
+        </div>
+        <div class="option-group">
+          <h4>衣服</h4>
+          <div class="search-box-container">
+            <input type="text" class="search-box" id="clothSearch" placeholder="搜索衣服..." />
+          </div>
+          <div class="card-grid" id="clothCards"></div>
+          <div class="pagination" id="clothPagination"></div>
+        </div>
+        <div class="option-group">
+          <h4>鞋子</h4>
+          <div class="search-box-container">
+            <input type="text" class="search-box" id="shoeSearch" placeholder="搜索鞋子..." />
+          </div>
+          <div class="card-grid" id="shoeCards"></div>
+          <div class="pagination" id="shoePagination"></div>
+        </div>
+
+        <div class="panel-header">
+          <h3>4. 参考图片</h3>
+        </div>
+        <div class="upload-panel" id="uploadPanel">
+          <div class="upload-dropzone" id="dropzone">
+            <p>拖拽上传最多 6 张图片，或点击浏览</p>
+            <input type="file" id="imageUpload" accept="image/png,image/jpeg,image/webp" multiple />
+          </div>
+          <div class="thumbnail-grid" id="imagePreview"></div>
+        </div>
+
+        <div class="panel-header">
+          <h3>5. 备注与说明</h3>
+        </div>
+        <textarea id="notesInput" placeholder="姿势要求、表情要求、构图要求、其他说明..."></textarea>
+
+        <div class="panel-header">
+          <h3>6. 支付方式</h3>
+        </div>
+        <div class="radio-grid">
+          <label class="radio-card">
+            <input type="radio" name="payment" value="微信支付" checked />
+            <span>微信支付</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="payment" value="QQ支付" />
+            <span>QQ 支付</span>
+          </label>
+        </div>
+
+        <div class="generate-actions">
+          <button id="generateButton" class="primary-button" type="button">生成订单摘要</button>
+          <p class="hint">你的选择已本地保存到浏览器。</p>
+        </div>
+      </section>
+
+      <aside class="panel summary-panel">
+        <div class="panel-header">
+          <h3>实时订单预览</h3>
+        </div>
+        <div class="summary-card">
+          <div class="summary-row">
+            <span>委托类型</span><strong id="summaryService">无</strong>
+          </div>
+          <div class="summary-row">
+            <span>背景</span><strong id="summaryBackground">无</strong>
+          </div>
+          <div class="summary-row">
+            <span>武器</span><strong id="summaryWeapon">无</strong>
+          </div>
+          <div class="summary-row">
+            <span>头饰</span><strong id="summaryHead">无</strong>
+          </div>
+          <div class="summary-row">
+            <span>衣服</span><strong id="summaryCloth">无</strong>
+          </div>
+          <div class="summary-row">
+            <span>鞋子</span><strong id="summaryShoes">无</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>总价</span><strong id="summaryTotal">$0</strong>
+          </div>
+        </div>
+        <div class="order-preview-card">
+          <h4>预览图片</h4>
+          <div id="canvasPreviewWrapper" class="canvas-preview">
+            <p>暂未生成订单图片。</p>
+          </div>
+          <a id="downloadButton" class="secondary-button disabled" download="commission-order.png">下载 PNG</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
