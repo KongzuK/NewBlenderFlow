@@ -35,14 +35,7 @@ const state = {
   uploads: [],
 };
 
-const showcaseImages = [
-  'assets/showcase/1.png',
-  'assets/showcase/2.png',
-  'assets/showcase/3.png',
-  'assets/showcase/4.png',
-  'assets/showcase/5.png',
-  'assets/showcase/6.png',
-];
+let showcaseImages = [];
 
 // DOM elements
 const serviceCards = document.getElementById('serviceCards');
@@ -88,17 +81,19 @@ let carouselInterval = null;
 // Load resources from JSON
 async function loadResources() {
   try {
-    const [services, backgrounds, weapons, head, cloth, shoes] = await Promise.all([
+    const [services, backgrounds, weapons, head, cloth, shoes, showcase] = await Promise.all([
       fetch('data/services.json').then(r => r.json()),
       fetch('data/backgrounds.json').then(r => r.json()),
       fetch('data/weapons.json').then(r => r.json()),
       fetch('data/head.json').then(r => r.json()),
       fetch('data/cloth.json').then(r => r.json()),
-      fetch('data/shoes.json').then(r => r.json())
+      fetch('data/shoes.json').then(r => r.json()),
+      fetch('data/showcase.json').then(r => r.json())
     ]);
 
     resourceData = { services, backgrounds, weapons, head, cloth, shoes };
     filteredData = { weapons, head, cloth, shoes };
+    showcaseImages = showcase;
     
     renderServices();
     renderBackgrounds();
