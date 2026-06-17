@@ -7,14 +7,14 @@
   },
   {
     "id": "city",
-    "name": "涂鸦城市",
-    "image": "assets/backgrounds/city.png",
-    "price": 15
+    "name": "加贴图背景",
+    "image": "assets/backgrounds/背景2.png",
+    "price": 0
   },
   {
     "id": "neon",
-    "name": "霓虹飞溅",
-    "image": "assets/backgrounds/neon.png",
+    "name": "加3D背景",
+    "image": "assets/backgrounds/背景1.png",
     "price": 15
   }
 ]

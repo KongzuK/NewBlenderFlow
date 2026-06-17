@@ -1,17 +1,32 @@
 [
   {
-    "id": "sneakers",
-    "name": "运动鞋",
-    "image": "assets/shoes/sneakers.png"
+    "id": "泡泡雨鞋",
+    "name": "泡泡雨鞋",
+    "image": "assets/shoes/泡泡雨鞋.png"
   },
   {
-    "id": "boots",
-    "name": "街头靴",
-    "image": "assets/shoes/boots.png"
+    "id": "雨靴樱桃红",
+    "name": "雨靴樱桃红",
+    "image": "assets/shoes/雨靴樱桃红.png"
   },
   {
-    "id": "skates",
-    "name": "发光滑板鞋",
-    "image": "assets/shoes/skates.png"
+    "id": "雨靴青苔绿",
+    "name": "雨靴青苔绿",
+    "image": "assets/shoes/雨靴青苔绿.png"
+  },
+  {
+    "id": "流苏乐福鞋宽松",
+    "name": "流苏乐福鞋宽松",
+    "image": "assets/shoes/流苏乐福鞋宽松.png"
+  },
+  {
+    "id": "学校乐福鞋高级",
+    "name": "学校乐福鞋高级",
+    "image": "assets/shoes/学校乐福鞋高级.png"
+  },
+  {
+    "id": "鱼奇奇鞋",
+    "name": "鱼奇奇鞋",
+    "image": "assets/shoes/鱼奇奇鞋.png"
   }
 ]

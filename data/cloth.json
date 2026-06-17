@@ -1,17 +1,27 @@
 [
   {
-    "id": "hoodie",
-    "name": "墨迹连帽衫",
-    "image": "assets/cloth/hoodie.png"
+    "id": "bandana",
+    "name": "酥脆天妇罗T恤XXL",
+    "image": "assets/cloth/酥脆天妇罗T恤XXL.png"
   },
   {
-    "id": "jacket",
-    "name": "画布夹克",
-    "image": "assets/cloth/jacket.png"
+    "id": "鱼奇奇手套",
+    "name": "鱼奇奇手套",
+    "image": "assets/cloth/鱼奇奇手套.png"
   },
   {
-    "id": "tank",
-    "name": "滑板背心",
-    "image": "assets/cloth/tank.png"
+    "id": "工服初始",
+    "name": "工服初始",
+    "image": "assets/cloth/工服初始.png"
+  },
+  {
+    "id": "学校制服外套L",
+    "name": "学校制服外套L",
+    "image": "assets/cloth/学校制服外套L.png"
+  },
+  {
+    "id": "helmet",
+    "name": "学校针织罩衫蝴蝶结",
+    "image": "assets/cloth/学校针织罩衫蝴蝶结.png"
   }
 ]

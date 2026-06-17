@@ -1,17 +1,27 @@
 [
   {
-    "id": "bandana",
-    "name": "霓虹头巾",
-    "image": "assets/head/bandana.png"
+    "id": "桶眼鱼护目镜",
+    "name": "桶眼鱼护目镜",
+    "image": "assets/head/桶眼鱼护目镜.png"
   },
   {
-    "id": "cap",
-    "name": "街头棒球帽",
-    "image": "assets/head/cap.png"
+    "id": "工帽粉色",
+    "name": "工帽粉色",
+    "image": "assets/head/工帽粉色.png"
   },
   {
-    "id": "helmet",
-    "name": "画师头盔",
-    "image": "assets/head/helmet.png"
+    "id": "鱼奇奇头套",
+    "name": "鱼奇奇头套",
+    "image": "assets/head/鱼奇奇头套.png"
+  },
+  {
+    "id": "鱿鱼章鱼耳饰",
+    "name": "鱿鱼章鱼耳饰",
+    "image": "assets/head/鱿鱼章鱼耳饰.png"
+  },
+  {
+    "id": "千鸟帽",
+    "name": "千鸟帽",
+    "image": "assets/head/千鸟帽.png"
   }
 ]

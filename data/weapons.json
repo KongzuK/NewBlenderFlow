@@ -1,20 +1,32 @@
 [
   {
-    "id": "splatter",
-    "name": "墨迹喷射器",
-    "image": "assets/weapons/splatter.png",
+    "id": "蜡笔泡",
+    "name": "蜡笔泡",
+    "image": "assets/weapons/蜡笔泡.png",
     "price": 10
   },
   {
-    "id": "roller",
-    "name": "街头滚筒",
-    "image": "assets/weapons/roller.png",
+    "id": "贴牌蜡笔泡",
+    "name": "贴牌蜡笔泡",
+    "image": "assets/weapons/贴牌蜡笔泡.png",
     "price": 10
   },
   {
-    "id": "charger",
-    "name": "能量狙击",
-    "image": "assets/weapons/charger.png",
+    "id": "巴勃罗",
+    "name": "巴勃罗",
+    "image": "assets/weapons/巴勃罗.png",
+    "price": 10
+  },
+  {
+    "id": "贴牌北斋",
+    "name": "贴牌北斋",
+    "image": "assets/weapons/贴牌北斋.png",
+    "price": 10
+  },
+  {
+    "id": "绿狙",
+    "name": "绿狙",
+    "image": "assets/weapons/绿狙.png",
     "price": 10
   }
 ]
