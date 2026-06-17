@@ -62,6 +62,7 @@ const themeToggle = document.getElementById('themeToggle');
 const carouselTrack = document.getElementById('carouselTrack');
 const carouselPrev = document.getElementById('carouselPrev');
 const carouselNext = document.getElementById('carouselNext');
+const carouselIndicators = document.getElementById('carouselIndicators');
 
 // Search inputs
 const weaponSearch = document.getElementById('weaponSearch');
@@ -301,13 +302,35 @@ function addFiles(files) {
 
 function createShowcase() {
   carouselTrack.innerHTML = '';
-  showcaseImages.forEach((src) => {
+  carouselIndicators.innerHTML = '';
+  
+  showcaseImages.forEach((src, index) => {
     const slide = document.createElement('div');
     slide.className = 'carousel-slide';
     slide.style.backgroundImage = `url('${src}')`;
     carouselTrack.appendChild(slide);
+
+    const indicator = document.createElement('button');
+    indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+    indicator.setAttribute('aria-label', `转到第 ${index + 1} 张图片`);
+    indicator.addEventListener('click', () => {
+      stopCarousel();
+      carouselIndex = index;
+      updateCarousel();
+      updateIndicators();
+      startCarousel();
+    });
+    carouselIndicators.appendChild(indicator);
   });
+  
   updateCarousel();
+  updateIndicators();
+}
+
+function updateIndicators() {
+  document.querySelectorAll('.carousel-indicator').forEach((btn, index) => {
+    btn.classList.toggle('active', index === carouselIndex);
+  });
 }
 
 function updateCarousel() {
@@ -318,11 +341,13 @@ function updateCarousel() {
 function nextSlide() {
   carouselIndex = (carouselIndex + 1) % showcaseImages.length;
   updateCarousel();
+  updateIndicators();
 }
 
 function prevSlide() {
   carouselIndex = (carouselIndex - 1 + showcaseImages.length) % showcaseImages.length;
   updateCarousel();
+  updateIndicators();
 }
 
 function startCarousel() {
