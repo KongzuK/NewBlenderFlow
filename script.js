@@ -303,11 +303,14 @@ function addFiles(files) {
 function createShowcase() {
   carouselTrack.innerHTML = '';
   carouselIndicators.innerHTML = '';
-  
+
   showcaseImages.forEach((src, index) => {
     const slide = document.createElement('div');
     slide.className = 'carousel-slide';
-    slide.style.backgroundImage = `url('${src}')`;
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `展示图 ${index + 1}`;
+    slide.appendChild(img);
     carouselTrack.appendChild(slide);
 
     const indicator = document.createElement('button');
@@ -322,7 +325,7 @@ function createShowcase() {
     });
     carouselIndicators.appendChild(indicator);
   });
-  
+
   updateCarousel();
   updateIndicators();
 }
@@ -334,6 +337,7 @@ function updateIndicators() {
 }
 
 function updateCarousel() {
+  if (!showcaseImages.length) return;
   const offset = carouselIndex * -100;
   carouselTrack.style.transform = `translateX(${offset}%)`;
 }
