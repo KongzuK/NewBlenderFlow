@@ -36,10 +36,12 @@ const state = {
 };
 
 const showcaseImages = [
-  'assets/showcase/showcase1.png',
-  'assets/showcase/showcase2.png',
-  'assets/showcase/showcase3.png',
-  'assets/showcase/showcase4.png',
+  'assets/showcase/1.png',
+  'assets/showcase/2.png',
+  'assets/showcase/3.png',
+  'assets/showcase/4.png',
+  'assets/showcase/5.png',
+  'assets/showcase/6.png',
 ];
 
 // DOM elements
