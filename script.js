@@ -509,8 +509,9 @@ function init() {
   loadResources().then(() => {
     updateSummary();
     refreshActiveStates();
+    createShowcase();
+    startCarousel();
   });
-  createShowcase();
   renderUploads();
 
   notesInput.addEventListener('input', (event) => {
@@ -576,8 +577,6 @@ function init() {
     prevSlide();
     startCarousel();
   });
-
-  startCarousel();
 }
 
 init();
