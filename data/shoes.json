@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sneakers",
+    "name": "运动鞋",
+    "image": "assets/shoes/sneakers.png"
+  },
+  {
+    "id": "boots",
+    "name": "街头靴",
+    "image": "assets/shoes/boots.png"
+  },
+  {
+    "id": "skates",
+    "name": "发光滑板鞋",
+    "image": "assets/shoes/skates.png"
+  }
+]

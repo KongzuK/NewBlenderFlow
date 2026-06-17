@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bandana",
+    "name": "霓虹头巾",
+    "image": "assets/head/bandana.png"
+  },
+  {
+    "id": "cap",
+    "name": "街头棒球帽",
+    "image": "assets/head/cap.png"
+  },
+  {
+    "id": "helmet",
+    "name": "画师头盔",
+    "image": "assets/head/helmet.png"
+  }
+]

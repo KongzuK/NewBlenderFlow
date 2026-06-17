@@ -1,0 +1,16 @@
+[
+  {
+    "id": "avatar",
+    "name": "搞笑头像",
+    "desc": "适合头像、梗图和趣味二次创作。",
+    "price": 15,
+    "image": "assets/services/avatar.png"
+  },
+  {
+    "id": "single",
+    "name": "单角色（无背景）",
+    "desc": "一个斯普拉顿角色，无背景。",
+    "price": 35,
+    "image": "assets/services/single.png"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "splatter",
+    "name": "墨迹喷射器",
+    "image": "assets/weapons/splatter.png",
+    "price": 10
+  },
+  {
+    "id": "roller",
+    "name": "街头滚筒",
+    "image": "assets/weapons/roller.png",
+    "price": 10
+  },
+  {
+    "id": "charger",
+    "name": "能量狙击",
+    "image": "assets/weapons/charger.png",
+    "price": 10
+  }
+]

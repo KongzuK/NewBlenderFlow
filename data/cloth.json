@@ -1,0 +1,17 @@
+[
+  {
+    "id": "hoodie",
+    "name": "墨迹连帽衫",
+    "image": "assets/cloth/hoodie.png"
+  },
+  {
+    "id": "jacket",
+    "name": "画布夹克",
+    "image": "assets/cloth/jacket.png"
+  },
+  {
+    "id": "tank",
+    "name": "滑板背心",
+    "image": "assets/cloth/tank.png"
+  }
+]

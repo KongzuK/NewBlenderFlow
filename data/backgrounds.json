@@ -1,0 +1,20 @@
+[
+  {
+    "id": "none",
+    "name": "无背景",
+    "image": "assets/backgrounds/none.png",
+    "price": 0
+  },
+  {
+    "id": "city",
+    "name": "涂鸦城市",
+    "image": "assets/backgrounds/city.png",
+    "price": 15
+  },
+  {
+    "id": "neon",
+    "name": "霓虹飞溅",
+    "image": "assets/backgrounds/neon.png",
+    "price": 15
+  }
+]
